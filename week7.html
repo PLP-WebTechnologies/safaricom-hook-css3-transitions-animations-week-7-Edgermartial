@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Interactive and Dynamic Web Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* CSS Transitions */
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #fff;
+            transition: all 0.2s ease-in-out;
+        }
+
+        .button:hover {
+            color: #fff;
+            background-color: green;
+        }
+
+        .button:focus {
+            outline: none;
+            box-shadow: 0 0 5px #e23939;
+        }
+
+        /* CSS Animations */
+        .banner {
+            width: 100%;
+            height: 200px;
+            background-color: #07bed6;
+            animation: fadein 2s ease-in-out;
+        }
+
+        @keyframes fadein {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 5px solid #39ca0d;
+            border-radius: 50%;
+            background-color: white;
+            animation: rotate 2s infinite linear;
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* JavaScript Interactions */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(19, 10, 138, 0.5);
+        }
+
+        .modal-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        .modal-button {
+            display: inline-block;
+            padding: 10px 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #fff;
+            cursor: pointer;
+        }
+
+        .modal-button:hover {
+            color: #fff;
+            background-color: #08a81e;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- CSS Transitions -->
+    <h1>Hover and Focus Transitions</h1>
+    <button class="button">Hover Me</button>
+    <button class="button">Focus Me</button>
+
+    <!-- CSS Animations -->
+    <h1>CSS Animations</h1>
+    <div class="banner"></div>
+    <div class="spinner"></div>
+
+    <!-- JavaScript Interactions -->
+    <h1>JavaScript Interactions</h1>
+    <button class="modal-button" onclick="showModal()">Open Modal</button>
+
+    <div class="modal" id="myModal">
+        <div class="modal-content">
+            <p>This is a modal window.</p>
+            <button class="modal-button" onclick="closeModal()">Close Modal</button>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript Functions
+        function calculateArea(width, height) {
+            return width * height;
+        }
+
+        function showModal() {
+            // Get the modal element
+            var modal = document.getElementById("myModal");
+
+            // Add the "show" class to the modal element
+            modal.classList.add("show");
+        }
+
+        function closeModal() {
+            // Get the modal element
+            var modal = document.getElementById("myModal");
+
+            // Remove the "show" class from the modal element
+            modal.classList.remove("show");
+        }
+    </script>
+</body>
+
+</html>
